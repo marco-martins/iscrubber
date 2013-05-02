@@ -1,0 +1,8 @@
+.main-scrub{
+  height: 160px;
+}
+.main-scrub ul.scrubber{
+  width: 150px;
+  float:left;
+}
+.main-scrub ul.scrubber img{padding:0;}
