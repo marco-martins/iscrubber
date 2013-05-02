@@ -1,0 +1,54 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Jquery Foto Scumbber</title>
+  <meta name="description" content="This jquery plugin mimics iPhoto's picture scrubbing feature">
+  <meta name="author" content="Marco Martins">
+</head>
+
+<style type="text/css" media="screen">
+  #main{text-align: center;font-family: "Trebuchet MS",Helvetica,sans-serif;}
+  ul.scrubber{margin:0 auto;}
+
+  ul.scrubber li {display: none;}
+</style>
+
+<body>
+
+  <div id="container">
+    <div id="main" role="main">
+      <h1>Mimics iPhoto picture scrubbing feature</h1>
+
+      <ul class="scrubber">
+        <li><img src="images/image1.png"></li>
+        <li><img src="images/image2.png"></li>
+        <li><img src="images/image3.png"></li>
+        <li><img src="images/image4.png"></li>
+        <li><img src="images/image5.png"></li>
+        <li><img src="images/image6.png"></li>
+        <li><img src="images/image7.png"></li>
+        <li><img src="images/image8.png"></li>
+        <li><img src="images/image9.png"></li>
+        <li><img src="images/image10.png"></li>
+        <li><img src="images/image11.png"></li>
+        <li><img src="images/image12.png"></li>
+      </ul>
+
+      <p>Over the picture to show the effect</p>
+      <a href="https://github.com/skarface/iscrubber.git" target="_blank">See on Github</a>
+    </div>
+  </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="lib/jquery.iscrubber.min.js"></script>
+
+<script type="text/javascript">
+  $(".scrubber").iscrubber();
+</script>
+
+</body>
+</html>
