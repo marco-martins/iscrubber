@@ -5,8 +5,6 @@ Jquery plugin mimics iPhoto's picture scrubbing feature.
 
 ### Minimal Setup
 
-* Add files to your project
-
 * Create the element structure with pictures
 
 `````html
@@ -16,7 +14,7 @@ Jquery plugin mimics iPhoto's picture scrubbing feature.
     <li><img src="images/image3.png"></li>
     <li><img src="images/image4.png"></li>
   </ul>
-`````html
+`````
 
 * Add this line to your css
 
@@ -41,7 +39,7 @@ Jquery plugin mimics iPhoto's picture scrubbing feature.
 
 `````javascript
   $(".scrubber").iscrubber({
-    showItem: 1, // the element (li) will be show first
+    showItem: 1, // the element (li) it will be show first
     leaveToFirst: true // come back the the first element when mouse leave scrubber
   });
 `````
