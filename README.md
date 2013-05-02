@@ -3,8 +3,7 @@ iScrubber
 
 Jquery plugin mimics iPhoto's picture scrubbing feature.
 
-See demo page:
-[a link](http://skarface.github.io/iscrubber/)
+[See demo page](http://skarface.github.io/iscrubber/)
 
 ### Minimal Setup
 
