@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Iscrubber : Jquery plugin mimics iPhoto's picture scrubbing feature." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Iscrubber</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/skarface/iscrubber">View on GitHub</a>
+
+          <h1 id="project_title">Iscrubber</h1>
+          <h2 id="project_tagline">Jquery plugin mimics iPhoto's picture scrubbing feature.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/skarface/iscrubber/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/skarface/iscrubber/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>iScrubber</h1>
+
+<p>Jquery plugin mimics iPhoto's picture scrubbing feature.</p>
+
+<h3>Minimal Setup</h3>
+
+<ul>
+<li>Create the element structure with pictures</li>
+</ul><div class="highlight"><pre>  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"scrubber"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/image1.png"</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/image2.png"</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/image3.png"</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/image4.png"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+
+<ul>
+<li>Add this line to your css</li>
+</ul><div class="highlight"><pre>  <span class="nt">ul</span><span class="nc">.scrubber</span> <span class="nt">li</span> <span class="p">{</span><span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;}</span>
+</pre></div>
+
+<ul>
+<li>You need add Jquery and iScrubber libs</li>
+</ul><div class="highlight"><pre>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"lib/jquery.iscrubber.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<ul>
+<li>To initialize the plugin</li>
+</ul><div class="highlight"><pre>  <span class="nx">$</span><span class="p">(</span><span class="s2">".scrubber"</span><span class="p">).</span><span class="nx">iscrubber</span><span class="p">();</span>
+</pre></div>
+
+<ul>
+<li>Default options, you can change it in initializer</li>
+</ul><div class="highlight"><pre>  <span class="nx">$</span><span class="p">(</span><span class="s2">".scrubber"</span><span class="p">).</span><span class="nx">iscrubber</span><span class="p">({</span>
+    <span class="nx">showItem</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// the element (li) it will be show first</span>
+    <span class="nx">leaveToFirst</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">// come back the the first element when mouse leave scrubber</span>
+  <span class="p">});</span>
+</pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Iscrubber maintained by <a href="https://github.com/skarface">skarface</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
