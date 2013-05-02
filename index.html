@@ -4,10 +4,10 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Iscrubber : Jquery plugin mimics iPhoto's picture scrubbing feature." />
+    <meta name="description" content="Iscrubber : Jquery plugin mimics iPhoto picture scrubbing feature." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/iscrubber.css">
     <title>Iscrubber</title>
   </head>
 
@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/skarface/iscrubber">View on GitHub</a>
 
           <h1 id="project_title">Iscrubber</h1>
-          <h2 id="project_tagline">Jquery plugin mimics iPhoto's picture scrubbing feature.</h2>
+          <h2 id="project_tagline">Jquery plugin mimics iPhoto picture scrubbing feature.</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/skarface/iscrubber/zipball/master">Download this project as a .zip file</a>
@@ -32,16 +32,44 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>iScrubber</h1>
+        <p>Drag your mouse over the image to see the effect</p>
 
-<p>Jquery plugin mimics iPhoto's picture scrubbing feature.</p>
+        <div class="main-scrub">
+          <ul class="scrubber">
+            <li><img src="images/image1.png"></li>
+            <li><img src="images/image2.png"></li>
+            <li><img src="images/image3.png"></li>
+            <li><img src="images/image4.png"></li>
+            <li><img src="images/image5.png"></li>
+            <li><img src="images/image6.png"></li>
+            <li><img src="images/image7.png"></li>
+            <li><img src="images/image8.png"></li>
+            <li><img src="images/image9.png"></li>
+            <li><img src="images/image10.png"></li>
+            <li><img src="images/image11.png"></li>
+            <li><img src="images/image12.png"></li>
+          </ul>
 
-<p><a href="http://skarface.github.io/iscrubber/">See demo page</a></p>
+          <ul class="scrubber">
+            <li><img src="images/image12.png"></li>
+            <li><img src="images/image11.png"></li>
+            <li><img src="images/image10.png"></li>
+            <li><img src="images/image9.png"></li>
+            <li><img src="images/image8.png"></li>
+            <li><img src="images/image7.png"></li>
+            <li><img src="images/image6.png"></li>
+            <li><img src="images/image5.png"></li>
+            <li><img src="images/image4.png"></li>
+            <li><img src="images/image3.png"></li>
+            <li><img src="images/image2.png"></li>
+            <li><img src="images/image1.png"></li>
+          </ul>
+        </div>
 
 <h3>Minimal Setup</h3>
 
-<ul>
-<li>Create the element structure with pictures</li>
-</ul><div class="highlight"><pre>  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"scrubber"</span><span class="nt">&gt;</span>
+<p>Create the element structure with pictures</p>
+<div class="highlight"><pre>  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"scrubber"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/image1.png"</span><span class="nt">&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/image2.png"</span><span class="nt">&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/image3.png"</span><span class="nt">&gt;&lt;/li&gt;</span>
@@ -49,25 +77,23 @@
   <span class="nt">&lt;/ul&gt;</span>
 </pre></div>
 
-<ul>
-<li>Add this line to your css</li>
-</ul><div class="highlight"><pre>  <span class="nt">ul</span><span class="nc">.scrubber</span> <span class="nt">li</span> <span class="p">{</span><span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;}</span>
+<p>Add this line to your css</p>
+<div class="highlight"><pre>  <span class="nt">ul</span><span class="nc">.scrubber</span> <span class="nt">li</span> <span class="p">{</span><span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;}</span>
 </pre></div>
 
-<ul>
-<li>You need add Jquery and iScrubber libs</li>
-</ul><div class="highlight"><pre>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<p>You need add Jquery and iScrubber libs</p>
+<div class="highlight"><pre>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"lib/jquery.iscrubber.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 </pre></div>
 
-<ul>
-<li>To initialize the plugin</li>
-</ul><div class="highlight"><pre>  <span class="nx">$</span><span class="p">(</span><span class="s2">".scrubber"</span><span class="p">).</span><span class="nx">iscrubber</span><span class="p">();</span>
+
+<p>To initialize the plugin</p>
+<div class="highlight"><pre>  <span class="nx">$</span><span class="p">(</span><span class="s2">".scrubber"</span><span class="p">).</span><span class="nx">iscrubber</span><span class="p">();</span>
 </pre></div>
 
-<ul>
-<li>Default options, you can change it in initializer</li>
-</ul><div class="highlight"><pre>  <span class="nx">$</span><span class="p">(</span><span class="s2">".scrubber"</span><span class="p">).</span><span class="nx">iscrubber</span><span class="p">({</span>
+
+<p>Default options, you can change it in initializer</p>
+<div class="highlight"><pre>  <span class="nx">$</span><span class="p">(</span><span class="s2">".scrubber"</span><span class="p">).</span><span class="nx">iscrubber</span><span class="p">({</span>
     <span class="nx">showItem</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// the element (li) it will be show first</span>
     <span class="nx">leaveToFirst</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">// come back the the first element when mouse leave scrubber</span>
   <span class="p">});</span>
@@ -82,17 +108,21 @@
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-40609978-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="javascripts/jquery.iscrubber.min.js"></script>
+  <script>
+   $(".scrubber").iscrubber();
+  </script>
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-40609978-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+  </script>
 
 
   </body>
