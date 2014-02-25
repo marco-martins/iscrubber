@@ -1,7 +1,7 @@
 iScrubber
 =========
 
-Jquery plugin mimics iPhoto's picture scrubbing feature.
+jQuery plugin that mimics iPhoto's picture scrubbing feature.
 
 [See demo page](http://skarface.github.io/iscrubber/)
 
@@ -18,30 +18,31 @@ Jquery plugin mimics iPhoto's picture scrubbing feature.
   </ul>
 `````
 
-* Add this line to your css
+* Add this line to your CSS
 
 `````css
   ul.scrubber li {display: none;}
 `````
 
-* You need add Jquery and iScrubber libs
+* Add jQuery and iScrubber libs
 
 `````html
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   <script src="lib/jquery.iscrubber.min.js"></script>
 `````
 
-* To initialize the plugin
+* Initialize the plugin
 
 `````javascript
   $(".scrubber").iscrubber();
 `````
 
-* Default options, you can change it in initializer
+* Customize it
 
 `````javascript
   $(".scrubber").iscrubber({
-    showItem: 1, // the element (li) it will be show first
-    leaveToFirst: true // come back the the first element when mouse leave scrubber
+    showItem: 1, // the element (li) to show first; 1 based index
+    leaveToFirst: true // come back the the first element when mouse leaves scrubbing area
+    hideWithClass: "hide" // use the specified class or set to false to use display:none
   });
 `````
