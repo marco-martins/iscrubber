@@ -1,6 +1,7 @@
 ###
-  jQuery iScrubber plugin 1.0.0
-
+  jQuery iScrubber plugin 1.1.0
+  
+  @preserve
   Created by Marco Martins
   https://github.com/skarface/iscrubber.git
 ###
@@ -16,8 +17,12 @@ $.fn.iscrubber = (customOptions) ->
 
   ### scrub function ###
   scrub = (elements, itemToShow) ->
-    elements.css('display', 'none')
-    $(elements[itemToShow-1]).css('display', 'block')
+    if options.hideWithClass
+      elements.addClass(options.hideWithClass)
+      $(elements[itemToShow - 1]).removeClass(options.hideWithClass)
+    else
+      elements.css('display', 'none')
+      $(elements[itemToShow - 1]).css('display', 'block')
 
   this.each ->
     $this = $(this)
