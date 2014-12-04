@@ -54,6 +54,8 @@
         ### get the index of image to display on top ###
         index = Math.ceil(x/trigger)
         index = 1 if index == 0
+        if ((index + 1) > elements.length)
+          index = elements.length
         scrub(elements, index)
 
       ### bind event when mouse leaves scrubber ###
@@ -71,6 +73,8 @@
             k_x = e.pageX - $knob.offset().left
             k_index = Math.ceil(k_x/k_trigger)
             k_index = 1 if k_index == 0
+            if ((k_index + 1) > elements.length)
+              k_index = elements.length
             scrub(elements, k_index)
           $knob.on 'mouseleave.iscrubber', ->
             scrub(elements, options.showItem) if options.leaveToFirst is true
