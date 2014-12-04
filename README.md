@@ -44,5 +44,8 @@ jQuery plugin that mimics iPhoto's picture scrubbing feature.
     showItem: 1, // the element (li) to show first; 1 based index
     leaveToFirst: true // come back the the first element when mouse leaves scrubbing area
     hideWithClass: "hide" // use the specified class or set to false to use display:none
+    additionalScrubKnobs: false // if true, find any links in the page that have the same
+                                // data-scrubber value as the scrubber ul, and scrub images
+                                // when the mouse hovers over them.
   });
 `````
