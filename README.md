@@ -42,7 +42,7 @@ jQuery plugin that mimics iPhoto's picture scrubbing feature.
 `````javascript
   $(".scrubber").iscrubber({
     showItem: 1, // the element (li) to show first; 1 based index
-    leaveToFirst: true // come back the the first element when mouse leaves scrubbing area
-    hideWithClass: "hide" // use the specified class or set to false to use display:none
+    leaveToFirst: true, // come back the the first element when mouse leaves scrubbing area
+    direction: "horizontal" // use to specified the direction that mouse take to show the items
   });
 `````

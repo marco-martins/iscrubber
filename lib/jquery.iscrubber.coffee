@@ -27,12 +27,8 @@ $.fn.iscrubber = (customOptions) ->
 
   ### scrub function ###
   scrub = (elements, itemToShow) ->
-    if options.hideWithClass
-      elements.addClass(options.hideWithClass)
-      $(elements[itemToShow - 1]).removeClass(options.hideWithClass)
-    else
-      elements.css('display', 'none')
-      $(elements[itemToShow - 1]).css('display', 'block')
+    elements.css('display', 'none')
+    $(elements[itemToShow - 1]).css('display', 'block')
 
   this.each ->
     $this = $(this)
