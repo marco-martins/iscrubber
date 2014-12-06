@@ -1,8 +1,27 @@
 .main-scrub{
-  height: 160px;
+  _height: 160px;
 }
+.main-scrub .box{
+  float:left;
+  text-align: center;
+  margin: 10px;
+}
+
 .main-scrub ul.scrubber{
   width: 150px;
-  float:left;
+  clear: both;
+  height: 160px!important;
 }
+.main-scrub ul.scrubber li {
+  padding:0!important;
+}
+
 .main-scrub ul.scrubber img{padding:0;}
+.main-scrub small {
+  font-size: 12px;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

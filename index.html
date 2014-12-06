@@ -34,36 +34,60 @@
         <h1>iScrubber</h1>
         <p>Drag your mouse over the image to see the effect</p>
 
-        <div class="main-scrub">
-          <ul class="scrubber">
-            <li><img src="images/image1.png"></li>
-            <li><img src="images/image2.png"></li>
-            <li><img src="images/image3.png"></li>
-            <li><img src="images/image4.png"></li>
-            <li><img src="images/image5.png"></li>
-            <li><img src="images/image6.png"></li>
-            <li><img src="images/image7.png"></li>
-            <li><img src="images/image8.png"></li>
-            <li><img src="images/image9.png"></li>
-            <li><img src="images/image10.png"></li>
-            <li><img src="images/image11.png"></li>
-            <li><img src="images/image12.png"></li>
-          </ul>
+        <div class="main-scrub clearfix">
+          <div class="box">
+            <ul class="scrubber scrubber-default">
+              <li><img src="images/image1.png"></li>
+              <li><img src="images/image2.png"></li>
+              <li><img src="images/image3.png"></li>
+              <li><img src="images/image4.png"></li>
+              <li><img src="images/image5.png"></li>
+              <li><img src="images/image6.png"></li>
+              <li><img src="images/image7.png"></li>
+              <li><img src="images/image8.png"></li>
+              <li><img src="images/image9.png"></li>
+              <li><img src="images/image10.png"></li>
+              <li><img src="images/image11.png"></li>
+              <li><img src="images/image12.png"></li>
+            </ul>
+            <small>Default scrubber</small>
+          </div>
 
-          <ul class="scrubber">
-            <li><img src="images/image12.png"></li>
-            <li><img src="images/image11.png"></li>
-            <li><img src="images/image10.png"></li>
-            <li><img src="images/image9.png"></li>
-            <li><img src="images/image8.png"></li>
-            <li><img src="images/image7.png"></li>
-            <li><img src="images/image6.png"></li>
-            <li><img src="images/image5.png"></li>
-            <li><img src="images/image4.png"></li>
-            <li><img src="images/image3.png"></li>
-            <li><img src="images/image2.png"></li>
-            <li><img src="images/image1.png"></li>
-          </ul>
+          <div class="box">
+            <ul class="scrubber scrubber-vertical">
+              <li><img src="images/image12.png"></li>
+              <li><img src="images/image11.png"></li>
+              <li><img src="images/image10.png"></li>
+              <li><img src="images/image9.png"></li>
+              <li><img src="images/image8.png"></li>
+              <li><img src="images/image7.png"></li>
+              <li><img src="images/image6.png"></li>
+              <li><img src="images/image5.png"></li>
+              <li><img src="images/image4.png"></li>
+              <li><img src="images/image3.png"></li>
+              <li><img src="images/image2.png"></li>
+              <li><img src="images/image1.png"></li>
+            </ul>
+            <small>Vertical scrubber</small>
+          </div>
+
+          <div class="box">
+            <ul class="scrubber scrubber-combined">
+              <li><img src="images/image1.png"></li>
+              <li><img src="images/image2.png"></li>
+              <li><img src="images/image3.png"></li>
+              <li><img src="images/image4.png"></li>
+              <li><img src="images/image5.png"></li>
+              <li><img src="images/image6.png"></li>
+              <li><img src="images/image7.png"></li>
+              <li><img src="images/image8.png"></li>
+              <li><img src="images/image9.png"></li>
+              <li><img src="images/image10.png"></li>
+              <li><img src="images/image11.png"></li>
+              <li><img src="images/image12.png"></li>
+            </ul>
+            <small>Combined scrubber</small>
+          </div>
         </div>
 
 <h3>Minimal Setup</h3>
@@ -77,7 +101,7 @@
   <span class="nt">&lt;/ul&gt;</span>
 </pre></div>
 
-<p>Add this line to your css</p>
+<p>Add this line to your css (optional)</p>
 <div class="highlight"><pre>  <span class="nt">ul</span><span class="nc">.scrubber</span> <span class="nt">li</span> <span class="p">{</span><span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;}</span>
 </pre></div>
 
@@ -95,9 +119,11 @@
 <p>Default options, you can change it in initializer</p>
 <div class="highlight"><pre>  <span class="nx">$</span><span class="p">(</span><span class="s2">".scrubber"</span><span class="p">).</span><span class="nx">iscrubber</span><span class="p">({</span>
     <span class="nx">showItem</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// the element (li) it will be show first</span>
-    <span class="nx">leaveToFirst</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">// come back the the first element when mouse leave scrubber</span>
+    <span class="nx">leaveToFirst</span><span class="o">:</span> <span class="kc">true,</span> <span class="c1">// come back the the first element when mouse leave scrubber</span>
+    <span class="nx">direction</span><span class="o">:</span> <span class="kc">'horizontal'</span> <span class="c1">// use to specified the direction that mouse takes to show the items
   <span class="p">});</span>
 </pre></div>
+      <p>Mouse direction options 'horizontal', 'vertical' and 'combined' (horizontal is the default)</p>
       </section>
     </div>
 
@@ -111,7 +137,9 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   <script src="javascripts/jquery.iscrubber.min.js"></script>
   <script>
-   $(".scrubber").iscrubber();
+   $(".scrubber-default").iscrubber();
+   $(".scrubber-vertical").iscrubber({direction: 'vertical'});
+   $(".scrubber-combined").iscrubber({direction: 'combined'});
   </script>
   <script type="text/javascript">
   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
