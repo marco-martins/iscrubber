@@ -1,0 +1,62 @@
+<h1>iScrubber</h1>
+
+<p>jQuery plugin that mimics iPhoto&rsquo;s picture scrubbing feature.</p>
+
+<p><a href="http://skarface.github.io/iscrubber/">See demo page</a></p>
+
+<h3>Minimal Setup</h3>
+
+<ul>
+<li>Create the element structure with pictures</li>
+</ul>
+
+
+<p><code>html
+  &lt;ul class="scrubber"&gt;
+    &lt;li&gt;&lt;img src="images/image1.png"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="images/image2.png"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="images/image3.png"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src="images/image4.png"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+</code></p>
+
+<ul>
+<li>Add this line to your CSS</li>
+</ul>
+
+
+<p><code>css
+  ul.scrubber li {display: none;}
+</code></p>
+
+<ul>
+<li>Add jQuery and iScrubber libs</li>
+</ul>
+
+
+<p><code>html
+  &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script src="lib/jquery.iscrubber.min.js"&gt;&lt;/script&gt;
+</code></p>
+
+<ul>
+<li>Initialize the plugin</li>
+</ul>
+
+
+<p><code>javascript
+  $(".scrubber").iscrubber();
+</code></p>
+
+<ul>
+<li>Customize it</li>
+</ul>
+
+
+<p><code>javascript
+  $(".scrubber").iscrubber({
+    showItem: 1, // the element (li) to show first; 1 based index
+    leaveToFirst: true, // come back the the first element when mouse leaves scrubbing area
+    direction: "horizontal" // use to specified the direction that mouse take to show the items
+  });
+</code></p>
