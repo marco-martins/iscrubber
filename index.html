@@ -11,9 +11,11 @@
 </head>
 
 <style type="text/css" media="screen">
-  #main{text-align: center;font-family: "Trebuchet MS",Helvetica,sans-serif;}
+  #main{text-align:center;font-family: "Trebuchet MS",Helvetica,sans-serif;width: 800px;margin: 0 auto;}
+  .box{float:left;margin:30px 20px;width:45%;box-sizing:border-box;}
+  .clearfix:after {content: "";display: table;clear: both;}
+  .content{margin: 20px 0;}
   ul.scrubber{margin:0 auto;}
-
   ul.scrubber li {display: none;}
 </style>
 
@@ -22,32 +24,82 @@
   <div id="container">
     <div id="main" role="main">
       <h1>Mimics iPhoto picture scrubbing feature</h1>
+      <p>Over the pictures to show the effect</p>
 
-      <ul class="scrubber">
-        <li><img src="images/image1.png"></li>
-        <li><img src="images/image2.png"></li>
-        <li><img src="images/image3.png"></li>
-        <li><img src="images/image4.png"></li>
-        <li><img src="images/image5.png"></li>
-        <li><img src="images/image6.png"></li>
-        <li><img src="images/image7.png"></li>
-        <li><img src="images/image8.png"></li>
-        <li><img src="images/image9.png"></li>
-        <li><img src="images/image10.png"></li>
-        <li><img src="images/image11.png"></li>
-        <li><img src="images/image12.png"></li>
-      </ul>
+      <div class="content clearfix">
+        <div class="box">
+          <ul class="scrubber scrubber-horizontal">
+            <li><img src="images/image1.png"></li>
+            <li><img src="images/image2.png"></li>
+            <li><img src="images/image3.png"></li>
+            <li><img src="images/image4.png"></li>
+            <li><img src="images/image5.png"></li>
+            <li><img src="images/image6.png"></li>
+            <li><img src="images/image7.png"></li>
+            <li><img src="images/image8.png"></li>
+            <li><img src="images/image9.png"></li>
+            <li><img src="images/image10.png"></li>
+            <li><img src="images/image11.png"></li>
+            <li><img src="images/image12.png"></li>
+          </ul>
+          <small>Default iScrubber (horizontal mouse movement)</small>
+        </div> <!-- /.box -->
 
-      <p>Over the picture to show the effect</p>
+        <div class="box">
+          <ul class="scrubber scrubber-vertical">
+            <li><img src="images/image1.png"></li>
+            <li><img src="images/image2.png"></li>
+            <li><img src="images/image3.png"></li>
+            <li><img src="images/image4.png"></li>
+            <li><img src="images/image5.png"></li>
+            <li><img src="images/image6.png"></li>
+            <li><img src="images/image7.png"></li>
+            <li><img src="images/image8.png"></li>
+            <li><img src="images/image9.png"></li>
+            <li><img src="images/image10.png"></li>
+            <li><img src="images/image11.png"></li>
+            <li><img src="images/image12.png"></li>
+          </ul>
+          <small>Vertical iScrubber (vertical mouse movement)</small>
+        </div> <!-- /.box -->
+
+        <div class="box">
+          <ul class="scrubber scrubber-combined">
+            <li><img src="images/image1.png"></li>
+            <li><img src="images/image2.png"></li>
+            <li><img src="images/image3.png"></li>
+            <li><img src="images/image4.png"></li>
+            <li><img src="images/image5.png"></li>
+            <li><img src="images/image6.png"></li>
+            <li><img src="images/image7.png"></li>
+            <li><img src="images/image8.png"></li>
+            <li><img src="images/image9.png"></li>
+            <li><img src="images/image10.png"></li>
+            <li><img src="images/image11.png"></li>
+            <li><img src="images/image12.png"></li>
+          </ul>
+          <small>Combined iScrubber (combined mouse movement)</small>
+        </div> <!-- /.box -->
+
+      </div> <!-- /.content -->
+
       <a href="https://github.com/skarface/iscrubber.git" target="_blank">See on Github</a>
-    </div>
-  </div>
+    </div> <!-- /#main -->
+  </div> <!-- /.container -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="lib/jquery.iscrubber.min.js"></script>
+<script src="lib/jquery.iscrubber.js"></script>
 
 <script type="text/javascript">
-  $(".scrubber").iscrubber();
+  $(".scrubber-horizontal").iscrubber();
+
+  $(".scrubber-vertical").iscrubber(
+    { direction: 'vertical' }
+  );
+
+  $(".scrubber-combined").iscrubber(
+    { direction: 'combined' }
+  );
 </script>
 
 </body>
