@@ -36,3 +36,13 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# CODEKIT #
+###########
+config.codekit
+.codekit-cache
+
+# SUBLIME TEXT #
+################
+*.sublime-project
+*.sublime-workspace
