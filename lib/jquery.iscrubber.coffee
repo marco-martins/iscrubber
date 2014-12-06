@@ -8,16 +8,16 @@
 
 $.fn.iscrubber = (customOptions) ->
 
-  DIRECTION =
-    HORIZONTAL: 'horizontal'
-    VERTICAL: 'vertical'
+  _direction =
+    horizontal: 'horizontal'
+    vertical: 'vertical'
     ### combined works either horizontal or vertical, depending on the direction from where the mouse entered the element ###
-    COMBINED: 'combined'
+    combined: 'combined'
 
   $.fn.iscrubber.defaultOptions =
     showItem: 1
     leaveToFirst: true
-    direction: DIRECTION.HORIZONTAL
+    direction: _direction.horizontal
 
   ### Set the options ###
   options = $.extend({}, $.fn.iscrubber.defaultOptions, customOptions)
@@ -62,26 +62,26 @@ $.fn.iscrubber = (customOptions) ->
 
     ### bind event when mouse moves over scrubber ###
     $this.on 'mousemove.iscrubber', (e) ->
-      if activeDirection is DIRECTION.COMBINED
+      if activeDirection is _direction.combined
         ### starting direction depends on the side from which the mouse entered the element ###
         horizontalDistanceToEdge = Math.min(Math.abs(e.pageX - $this.offset().left), Math.abs(e.pageX - $this.offset().left - width))
         verticalDistanceToEdge = Math.min(Math.abs(e.pageY - $this.offset().top), Math.abs(e.pageY - $this.offset().top - height))
 
         if (horizontalDistanceToEdge < verticalDistanceToEdge)
-          activeDirection = DIRECTION.HORIZONTAL
+          activeDirection = _direction.horizontal
         else
-          activeDirection = DIRECTION.VERTICAL
+          activeDirection = _direction.vertical
 
         [lastX, lastY, originX, originY] = [e.pageX, e.pageY, e.pageX, e.pageY]
 
-      if options.direction is DIRECTION.COMBINED
+      if options.direction is _direction.combined
         ### allow to change direction in between, if the user starts moving significantly in the opposite direction ###
-        if activeDirection is DIRECTION.HORIZONTAL and Math.abs(e.pageY - originY) > height * 0.25
-          activeDirection = DIRECTION.VERTICAL
+        if activeDirection is _direction.horizontal and Math.abs(e.pageY - originY) > height * 0.25
+          activeDirection = _direction.vertical
           [originX, originY] = [e.pageX, e.pageY]
 
-        else if activeDirection is DIRECTION.VERTICAL and Math.abs(e.pageX - originX) > width * 0.25
-          activeDirection = DIRECTION.HORIZONTAL
+        else if activeDirection is _direction.vertical and Math.abs(e.pageX - originX) > width * 0.25
+          activeDirection = _direction.horizontal
           [originX, originY] = [e.pageX, e.pageY]
 
         ### determine which direction the user is moving right now ###
@@ -97,9 +97,9 @@ $.fn.iscrubber = (customOptions) ->
 
       ### get the index of image to display on top ###
       switch activeDirection
-        when DIRECTION.HORIZONTAL
+        when _direction.horizontal
           index = Math.ceil((e.pageX - $this.offset().left) / horizontalTrigger)
-        when DIRECTION.VERTICAL
+        when _direction.vertical
           index = Math.ceil((e.pageY - $this.offset().top) / verticalTrigger)
 
       index = Math.min(Math.max(index, 1), numberOfChildren)
@@ -108,5 +108,5 @@ $.fn.iscrubber = (customOptions) ->
     $this.on 'mouseleave.iscrubber', ->
       scrub(elements, options.showItem) if options.leaveToFirst is true
 
-      activeDirection = DIRECTION.COMBINED if options.direction is DIRECTION.COMBINED
+      activeDirection = _direction.combined if options.direction is _direction.combined
 
