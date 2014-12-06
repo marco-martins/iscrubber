@@ -1,5 +1,5 @@
 ###
-  jQuery iScrubber plugin 1.1.0
+  jQuery iScrubber plugin 1.2.0
 
   @preserve
   Created by Marco Martins

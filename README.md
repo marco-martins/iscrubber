@@ -5,6 +5,9 @@ jQuery plugin that mimics iPhoto's picture scrubbing feature.
 
 [See demo page](http://skarface.github.io/iscrubber/)
 
+##### 1.2.0
+* Added option to choose the mouse direction that show the items
+
 ### Minimal Setup
 
 * Create the element structure with pictures
@@ -43,6 +46,6 @@ jQuery plugin that mimics iPhoto's picture scrubbing feature.
   $(".scrubber").iscrubber({
     showItem: 1, // the element (li) to show first; 1 based index
     leaveToFirst: true, // come back the the first element when mouse leaves scrubbing area
-    direction: "horizontal" // use to specified the direction that mouse take to show the items
+    direction: "horizontal" // use to specified the direction that mouse takes to show the items
   });
 `````
